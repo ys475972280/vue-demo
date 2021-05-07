@@ -8,7 +8,7 @@
       <TodoFooter>
         <!--     使用slot的方式来实现   -->
         <input type="checkbox" v-model="isAllCheck" slot="checkAll"/>
-        <span slot="count">已完成{{ completeSize }}/全部{{ todoList.length }}任务</span>
+        <span slot="count">已完成{{ completeSize }}/全部{{ todoList.length }}任务test</span>
         <el-button type="danger" round size="small" @click="deleteCompleteTodos" v-show="completeSize" slot="deleteBtn">
           清除已完成的任务
         </el-button>
