@@ -92,7 +92,6 @@ export default {
       //   //  将todolist 最新的值保存在localstorage
       //   storageUtil.saveTodos(val)
       // }
-
       //  简化代码
       handler: storageUtil.saveTodos
     }
