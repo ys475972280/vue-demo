@@ -22,7 +22,7 @@
 import TodoHeader from "./components/TodoHeader";
 import TodoList from "./components/TodoList";
 import TodoFooter from "./components/TodoFooter";
-import storageUtil from "../../util/storageUtil";
+import storageUtil from "../../utils/storageUtil";
 
 export default {
   name: "index",

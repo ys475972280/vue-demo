@@ -36,7 +36,7 @@ export default {
   },
   //2.更新阶段
   beforeUpdate() {
-    console.log('beforeUpdate')
+    // console.log('beforeUpdate')
   },
   updated() {
   },
