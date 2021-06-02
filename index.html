@@ -4,9 +4,62 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>vue-basis</title>
+  <style>
+    html,
+    body,
+    #app {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .loading-container {
+      background-color: #303133;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .loading-main {
+      user-select: none;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .loading {
+      height: 32px;
+      width: 32px;
+      margin-bottom: 20px;
+    }
+
+    .title {
+      color: #fff;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .sub-title {
+      color: #ababab;
+      font-size: 12px;
+    }
+  </style>
 </head>
 <body>
-<div id="app"></div>
+<div id="app">
+  <div class="loading-container">
+    <div class="loading-main">
+      <img class="loading" src="./static/svg/loading-spin.svg"/>
+      <div class="title">正在加载资源</div>
+      <div class="sub-title">
+        初次加载资源可能需要较多时间 请耐心等待
+      </div>
+    </div>
+  </div>
+</div>
 <!-- built files will be auto injected -->
 </body>
 </html>

@@ -77,7 +77,8 @@ import {
   MessageBox,
   Message,
   Notification,
-  Popconfirm
+  Popconfirm,
+  Avatar
 } from 'element-ui';
 
 Vue.use(Pagination);
@@ -155,6 +156,7 @@ Vue.use(PageHeader);
 Vue.use(CascaderPanel);
 Vue.use(Popconfirm)
 Vue.use(Loading.directive);
+Vue.use(Avatar)
 
 Vue.prototype.$loading = Loading.service;
 Vue.prototype.$msgbox = MessageBox;
