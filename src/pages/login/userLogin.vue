@@ -24,6 +24,7 @@
         type="primary"
         @click.native.prevent="handleLogin"
         class="login-submit"
+        plain
       >
         登录
       </el-button>
@@ -52,11 +53,14 @@ export default {
   },
   methods: {
     handleLogin() {
-      setItem('token', 'ok')
-      console.log()
-      // this.$router.push({path: 'basis'})
-      this.$router.push({path: '/basis'})
-      console.log('点击登录了')
+      this.$refs.loginForm.validate(valid => {
+        if (valid) {
+          setItem('token', true)
+          this.$router.push({
+            path: '/'
+          })
+        }
+      })
     },
     showPassword() {
       this.passwordType == ''

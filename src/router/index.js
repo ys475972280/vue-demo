@@ -34,5 +34,10 @@ export default new Router({
       name: 'basis',
       component: () => import('@/pages/basis')
     },
+    {
+      path: '/',
+      name: '主页',
+      redirect: '/basis'
+    }
   ]
 })

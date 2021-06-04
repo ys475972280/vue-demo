@@ -13,6 +13,7 @@ import less from 'less'
 import './auth'//权限
 import './plugins/components'
 import './styles/common.less'
+import pageContainer from './components/page-container/index'
 
 moment.locale('zh-cn'); //设置语言 或 moment.lang('zh-cn');
 Vue.config.productionTip = false;
@@ -21,6 +22,8 @@ Vue.prototype.$axios = Axios
 Vue.use(Directives)
 Vue.use(Filters)
 Vue.use(less)
+// 注册全局容器
+Vue.component('pageContainer', pageContainer)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

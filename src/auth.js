@@ -10,9 +10,15 @@ NProgress.configure({showSpinner: false})
 // /**
 //  *导航守卫
 //  * */
-// router.beforeEach((to, from, next) => {
-//   if (to.path === '/login') return next()
-//   const token = getItem('token')
-//   if (!token) return next('/login')
-//
-// })
+router.beforeEach((to, from, next) => {
+  const token = getItem('token')
+  if (token) {
+    next()
+  } else {
+    if (to.path !== '/login') {
+      next('/login')
+    } else {
+      next()
+    }
+  }
+})
